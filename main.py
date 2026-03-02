@@ -40,7 +40,7 @@ def hangman():
 
     win=False #because they have not yet won
     display=['_' for i in target_word]#for the _ _ _ _ _ print and tracking
-    lives=2*len(target_word)-2 #generous amount of lives for now
+    lives=min(2*len(target_word)-2,10) #for now #generous amount of lives for now
 
     while lives>0: #loop...
         print(f"Guess a letter(lives={lives}):") #prompt for hangman
